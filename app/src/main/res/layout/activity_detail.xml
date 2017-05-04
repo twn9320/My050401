@@ -14,4 +14,13 @@
         android:text="這裡是DetailActivity"
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="16dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="368dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:text="TextView"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:layout_editor_absoluteX="8dp" />
 </android.support.constraint.ConstraintLayout>

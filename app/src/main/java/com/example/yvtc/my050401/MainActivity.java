@@ -20,6 +20,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void click1 (View v){
         Intent it = new Intent(MainActivity.this,DetailActivity.class);
+        String msg = "這是通知的內容....";
+        it.putExtra("msg",msg);
         PendingIntent pi = PendingIntent.getActivity(MainActivity.this,123,it,PendingIntent.FLAG_UPDATE_CURRENT);
         Notification.Builder builder = new Notification.Builder(MainActivity.this);
         builder.setSmallIcon(R.mipmap.ic_launcher)
