@@ -3,6 +3,7 @@ package com.example.yvtc.my050401;
 import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
+import android.app.Service;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -11,6 +12,7 @@ import android.view.View;
 public class MainActivity extends AppCompatActivity {
     NotificationManager manager;
     final int NOTIFICATION_ID = 321;
+    Intent serviceIntent;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,8 +40,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void clickStartService (View v){
-        Intent it = new Intent(MainActivity.this , MyService.class);
-        startService(it);
+        serviceIntent = new Intent(MainActivity.this , MyService.class);
+        startService(serviceIntent);
 
+    }
+
+    public void clickStopService(View v){
+        stopService(serviceIntent);
     }
 }
