@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         Notification.Builder builder = new Notification.Builder(MainActivity.this);
         builder.setSmallIcon(R.mipmap.ic_launcher)
                 .setContentTitle("這是通知")
-                .setContentText("這裡是內容")
+                .setContentText(msg)
                 .setContentIntent(pi)
                 .setAutoCancel(true);
         Notification notification = builder.build();
